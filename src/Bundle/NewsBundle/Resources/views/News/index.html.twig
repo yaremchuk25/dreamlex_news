@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <h1 data-menu="list">News list</h1>
+
+    <a class="btn || btn-success" href="{{ path('_new') }}">Створити</a>
+    {% for entity in entities %}
+        <div class="blog-post">
+            <h2 class="blog-post-title"><a href="{{ path('_show', { 'id': entity.id}) }}">{{ entity.title }}</a></h2>
+            <p class="blog-post-meta">{{ entity.date }}</p>
+            <p>{{ entity.text }}</p>
+            <a class="btn || btn-primary" href="{{ path('_edit', { 'id': entity.id }) }}">Редагувати</a>
+        </div><!-- /.blog-post -->
+    {% endfor %}
+{% endblock %}

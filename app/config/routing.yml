@@ -1,0 +1,8 @@
+bundle_news:
+    resource: "@BundleNewsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
